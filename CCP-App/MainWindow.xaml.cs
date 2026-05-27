@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Buffers.Text;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,6 +24,8 @@ namespace CCP_App
         {
             ascii85 = new Ascii85();
             InitializeComponent();
+            encodeB64Button(null,null);
+            encodeA85Button(null, null);
         }
 
         public Boolean copyToClipboard(String data)
@@ -43,7 +46,15 @@ namespace CCP_App
 
         public String decodeBase64(String input)
         {
-            return Encoding.UTF8.GetString(Convert.FromBase64String(input));
+            if (Base64.IsValid(input))
+            {
+                return Encoding.UTF8.GetString(Convert.FromBase64String(input));
+            }
+            else
+            {
+                return "Invalid Base64";
+            }
+            
         }
 
         public String encodeASCII85(String input)
@@ -51,5 +62,40 @@ namespace CCP_App
             return ascii85.Encode(Encoding.UTF8.GetBytes(input));
         }
 
+        public String decodeASCII85(String input){
+            return Encoding.UTF8.GetString(ascii85.Decode(input));
+        }
+
+        private void NextButtonClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Next Button Clicked");
+            Hide();
+            Window1 temp = new Window1();
+            temp.Activate();
+        }
+
+        private void encodeB64Button(object sender, RoutedEventArgs e)
+        {
+            b64right.Text = encodeBase64(b64left.Text);
+        }
+
+        private void decodeB64Button(object sender, RoutedEventArgs e)
+        {
+            b64left.Text = decodeBase64(b64right.Text);
+        }
+
+        private void encodeA85Button(object sender, RoutedEventArgs e)
+        {
+            a85right.Text = encodeASCII85(a85left.Text);
+        }
+
+        private void decodeA85Button(object sender, RoutedEventArgs e)
+        {
+            if(decodeASCII85(a85right.Text) == null)
+            {
+                a85left.Text = "Invalid ASCII85";
+            }
+            a85left.Text = decodeASCII85(a85right.Text);
+        }
     }
 }

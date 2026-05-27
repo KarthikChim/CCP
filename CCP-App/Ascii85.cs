@@ -56,8 +56,9 @@ namespace WpfApp1
             {
                 if (!s.StartsWith(PrefixMark) | !s.EndsWith(SuffixMark))
                 {
-                    throw new Exception("ASCII85 encoded data should begin with '" + PrefixMark +
-                        "' and end with '" + SuffixMark + "'");
+                    //throw new Exception("ASCII85 encoded data should begin with '" + PrefixMark +
+                    //    "' and end with '" + SuffixMark + "'");
+                    return null;
                 }
             }
 

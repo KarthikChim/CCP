@@ -19,3 +19,5 @@ C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\obj\Debug\net8.0-windows\refint\CC
 C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\obj\Debug\net8.0-windows\CCP-App.pdb
 C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\obj\Debug\net8.0-windows\CCP-App.genruntimeconfig.cache
 C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\obj\Debug\net8.0-windows\ref\CCP-App.dll
+C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\obj\Debug\net8.0-windows\Window1.g.cs
+C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\obj\Debug\net8.0-windows\Window1.baml

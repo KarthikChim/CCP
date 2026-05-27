@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CCP-App</id>
+    <version>1.0.0</version>
+    <authors>CCP-App</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="86b08c8a38810701fbd6bab8805e4d586674e598" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\bin\Debug\net8.0-windows\CCP-App.runtimeconfig.json" target="lib\net8.0-windows7.0\CCP-App.runtimeconfig.json" />
+    <file src="C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\bin\Debug\net8.0-windows\CCP-App.dll" target="lib\net8.0-windows7.0\CCP-App.dll" />
+  </files>
+</package>

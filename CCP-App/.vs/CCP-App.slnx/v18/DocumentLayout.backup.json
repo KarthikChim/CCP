@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94F8A0D3-897A-464F-9365-AACA26A42DBE}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{94F8A0D3-897A-464F-9365-AACA26A42DBE}|CCP-App.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94F8A0D3-897A-464F-9365-AACA26A42DBE}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94F8A0D3-897A-464F-9365-AACA26A42DBE}|CCP-App.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\ascii85.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|solutionrelative:ascii85.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94F8A0D3-897A-464F-9365-AACA26A42DBE}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\ascii85.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94F8A0D3-897A-464F-9365-AACA26A42DBE}|CCP-App.csproj|solutionrelative:ascii85.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|solutionrelative:window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Ascii85.cs",
               "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\Ascii85.cs",
               "RelativeDocumentMoniker": "Ascii85.cs",
               "ToolTip": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\Ascii85.cs",
               "RelativeToolTip": "Ascii85.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwDwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T03:11:40.479Z",
+              "WhenOpened": "2026-05-27T14:41:33.689Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -51,15 +55,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwCIAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAhwEEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T20:18:39.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Window1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\Window1.xaml.cs",
+              "RelativeDocumentMoniker": "Window1.xaml.cs",
+              "ToolTip": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\Window1.xaml.cs",
+              "RelativeToolTip": "Window1.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T14:32:30.157Z",
               "EditorCaption": ""
             }
           ]
