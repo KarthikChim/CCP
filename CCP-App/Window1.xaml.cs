@@ -23,5 +23,11 @@ namespace CCP_App
         {
             InitializeComponent();
         }
+
+        public void generateReport()
+        {
+            //Scrolling/fast changing text in a text box somewhere
+        }
+
     }
 }

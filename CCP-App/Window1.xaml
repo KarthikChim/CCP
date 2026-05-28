@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CCP_App"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        ResizeMode="CanMinimize"
+        Title="CCP: Digital Surveillance" Height="640" Width="480">
     <Grid>
-        
+        <Label Content="Digital Surveillance" Margin="0,13,0,0" VerticalAlignment="Top" FontSize="24px" HorizontalAlignment="Center"/>
+        <Label Content="Cross Curriculum Project:" Height="27" VerticalAlignment="Top" HorizontalAlignment="Center"  FontStyle="Italic" Margin="0,2,0,0"/>
+        <Rectangle Height="1" Margin="38,58,38,0" Stroke="Black" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
     </Grid>
 </Window>

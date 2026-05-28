@@ -1,4 +1,5 @@
-﻿using System.Buffers.Text;
+﻿using Microsoft.Win32;
+using System.Buffers.Text;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,7 +20,7 @@ namespace CCP_App
     public partial class MainWindow : Window
     {
 
-        Ascii85 ascii85;
+        private Ascii85 ascii85;
         public MainWindow()
         {
             ascii85 = new Ascii85();
@@ -33,10 +34,23 @@ namespace CCP_App
             return false;
         }
 
-        public Boolean saveToFile(FileStyleUriParser file, String text)
+        private void saveEncodes(object sender, RoutedEventArgs e)
         {
-            //
-            return false;
+            MessageBox.Show("Save Messages");
+
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.InitialDirectory = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            dialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"; 
+            dialog.FilterIndex = 1;
+
+            if (dialog.ShowDialog() == true)
+            {
+                MessageBox.Show(dialog.FileName);
+
+                //TODO Continue from here
+
+            }
+
         }
 
         public String encodeBase64(String input)
@@ -68,10 +82,10 @@ namespace CCP_App
 
         private void NextButtonClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Next Button Clicked");
-            Hide();
+            //MessageBox.Show("Next Button Clicked");
             Window1 temp = new Window1();
-            temp.Activate();
+            temp.Show();
+            this.Close();
         }
 
         private void encodeB64Button(object sender, RoutedEventArgs e)
