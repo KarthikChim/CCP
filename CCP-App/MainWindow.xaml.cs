@@ -34,9 +34,16 @@ namespace CCP_App
             return false;
         }
 
+        public String generateSaveString()
+        {
+            //Gather current strings from the text boxes here
+
+
+            return null;
+        }
         private void saveEncodes(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Save Messages");
+            //MessageBox.Show("Save Messages");
 
             OpenFileDialog dialog = new OpenFileDialog();
             dialog.InitialDirectory = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
@@ -49,6 +56,10 @@ namespace CCP_App
 
                 //TODO Continue from here
 
+            }
+            else
+            {
+                MessageBox.Show("There was a problem selecting a file.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }

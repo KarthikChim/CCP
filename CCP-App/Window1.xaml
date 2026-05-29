@@ -20,6 +20,8 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
+        <TextBlock TextAlignment="Center" Height="56" Margin="0,81,0,0" TextWrapping="Wrap" Text="Everything you do can and will be tracked. Here's some information about your device!" FontSize="20px" VerticalAlignment="Top" Width="404" HorizontalAlignment="Center" />
+        <TextBox x:Name="reportText" HorizontalAlignment="Center" Height="407" Margin="0,151,0,0" TextWrapping="Wrap" Text="Processing report, please wait..." VerticalAlignment="Top" Width="404" FontFamily="Courier New" IsReadOnly="True" />
 
     </Grid>
 </Window>
