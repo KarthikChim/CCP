@@ -8,10 +8,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
 
-	<PublishSingleFile>true</PublishSingleFile>
-	<SelfContained>true</SelfContained>
+	  <PublishSingleFile>true</PublishSingleFile>
+	  <SelfContained>true</SelfContained>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-	<IncludeNativeLibrariesInSingleFile>true</IncludeNativeLibrariesInSingleFile>
+	  <IncludeNativeLibrariesInSingleFile>true</IncludeNativeLibrariesInSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
   </PropertyGroup>
 
   <ItemGroup>

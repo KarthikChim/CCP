@@ -1,0 +1,2 @@
+C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\bin\Release\net8.0-windows\publish\CCP-App.pdb
+C:\Users\samuelh\Documents\GitHub\CCP\CCP-App\bin\Release\net8.0-windows\publish\CCP-App.exe

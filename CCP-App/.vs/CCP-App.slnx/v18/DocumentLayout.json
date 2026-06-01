@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\window2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\window2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|solutionrelative:window2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C1FD6CE-B64A-5765-24FF-BC640B249774}|CCP-App.csproj|c:\\users\\samuelh\\documents\\github\\ccp\\ccp-app\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,20 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-06-01T03:26:23.314Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -62,8 +46,7 @@
               "RelativeToolTip": "Window2.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T16:32:29.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-31T16:32:29.663Z"
             },
             {
               "$type": "Document",
@@ -74,12 +57,11 @@
               "ToolTip": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\Window2.xaml",
               "RelativeToolTip": "Window2.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-31T16:29:10.823Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-31T16:29:10.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -91,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -99,24 +81,22 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAGsAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T02:17:20.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T02:17:20.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Window1.xaml",
               "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\Window1.xaml",
               "RelativeDocumentMoniker": "Window1.xaml",
               "ToolTip": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\Window1.xaml",
               "RelativeToolTip": "Window1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-27T18:00:16.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-27T18:00:16.111Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Window1.xaml.cs",
               "DocumentMoniker": "C:\\Users\\samuelh\\Documents\\GitHub\\CCP\\CCP-App\\Window1.xaml.cs",
               "RelativeDocumentMoniker": "Window1.xaml.cs",
@@ -124,8 +104,7 @@
               "RelativeToolTip": "Window1.xaml.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAASwFAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T14:32:30.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-27T14:32:30.157Z"
             }
           ]
         }
