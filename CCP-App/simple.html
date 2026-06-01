@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Encryption Demo</title>
+</head>
+<body>
+    <h1>Simple Encryption Demo</h1>
+
+    <p>Encryption changes a normal message into a hidden message.</p>
+    <p>Interception means someone tries to read the hidden message.</p>
+
+    <h2>Message</h2>
+    <input id="message" value="Hey guys!">
+
+    <h2>Buttons</h2>
+    <button onclick="caesar()">Caesar Cipher</button>
+    <button onclick="substitution()">Substitution Cipher</button>
+    <button onclick="aes()">AES Encryption</button>
+    <button onclick="rsa()">RSA Encryption</button>
+    <button onclick="intercept()">Intercept</button>
+
+    <h2>Output</h2>
+    <p><b>Original:</b> <span id="original">None</span></p>
+    <p><b>Encrypted:</b> <span id="encrypted">None</span></p>
+    <p><b>Result:</b> <span id="result">Click a button.</span></p>
+
+    <script>
+        var type = "";
+        var encryptedMessage = "";
+
+        function caesar() {
+            var message = document.getElementById("message").value.toUpperCase();
+            var encrypted = "";
+
+            for (var i = 0; i < message.length; i++) {
+                var letter = message[i];
+
+                if (letter >= "A" && letter <= "Z") {
+                    encrypted += String.fromCharCode(((letter.charCodeAt(0) - 65 + 3) % 26) + 65);
+                } else {
+                    encrypted += letter;
+                }
+            }
+
+            type = "Caesar";
+            encryptedMessage = encrypted;
+
+            document.getElementById("original").innerHTML = message;
+            document.getElementById("encrypted").innerHTML = encrypted;
+            document.getElementById("result").innerHTML = "Caesar shifts letters by 3.";
+        }
+
+        function aes() {
+            var message = document.getElementById("message").value.toUpperCase();
+
+            type = "AES";
+            encryptedMessage = "AES-256:X9A-72B-Q8Z-11K";
+
+            document.getElementById("original").innerHTML = message;
+            document.getElementById("encrypted").innerHTML = encryptedMessage;
+            document.getElementById("result").innerHTML = "AES is stronger and looks random.";
+        }
+
+        function substitution() {
+            var message = document.getElementById("message").value.toUpperCase();
+            var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var secretAlphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
+            var encrypted = "";
+
+            for (var i = 0; i < message.length; i++) {
+                var letter = message[i];
+                var position = alphabet.indexOf(letter);
+
+                if (position >= 0) {
+                    encrypted += secretAlphabet[position];
+                } else {
+                    encrypted += letter;
+                }
+            }
+
+            type = "Substitution";
+            encryptedMessage = encrypted;
+
+            document.getElementById("original").innerHTML = message;
+            document.getElementById("encrypted").innerHTML = encrypted;
+            document.getElementById("result").innerHTML = "Substitution replaces each letter with a different letter.";
+        }
+
+        function rsa() {
+            var message = document.getElementById("message").value.toUpperCase();
+
+            type = "RSA";
+            encryptedMessage = "RSA-PUBLIC-KEY:8K2-PQ9-Z11";
+
+            document.getElementById("original").innerHTML = message;
+            document.getElementById("encrypted").innerHTML = encryptedMessage;
+            document.getElementById("result").innerHTML = "RSA uses a public key to encrypt and a private key to decrypt.";
+        }
+
+        function intercept() {
+            if (type === "") {
+                document.getElementById("result").innerHTML = "Choose an encryption type first.";
+            } else if (type === "Caesar") {
+                document.getElementById("result").innerHTML =
+                    "Attacker sees " + encryptedMessage + ". Caesar can be broken by trying letter shifts.";
+            } else if (type === "Substitution") {
+                document.getElementById("result").innerHTML =
+                    "Attacker sees " + encryptedMessage + ". Substitution is harder, but repeated letters can show patterns.";
+            } else if (type === "RSA") {
+                document.getElementById("result").innerHTML =
+                    "Attacker sees " + encryptedMessage + ". RSA is hard to read without the private key.";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "Attacker sees " + encryptedMessage + ". AES is hard to read without the key.";
+            }
+        }
+    </script>
+</body>
+</html>

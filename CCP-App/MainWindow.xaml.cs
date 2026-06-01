@@ -1,5 +1,7 @@
 ﻿using Microsoft.Win32;
 using System.Buffers.Text;
+using System.Collections;
+using System.IO;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,37 +27,44 @@ namespace CCP_App
         {
             ascii85 = new Ascii85();
             InitializeComponent();
-            encodeB64Button(null,null);
+            encodeB64Button(null, null);
             encodeA85Button(null, null);
         }
 
-        public Boolean copyToClipboard(String data)
-        {
-            return false;
-        }
-
-        public String generateSaveString()
+        public String generateSaveString(String time)
         {
             //Gather current strings from the text boxes here
 
+            encodeB64Button(null,null);
+            encodeA85Button(null, null);
 
-            return null;
+            String s = "[" + time + "]\n";
+            s += "---Base64---\n";
+            s += b64left.Text + " <=> " + b64right.Text + "\n";
+            s += "---ASCII85---\n";
+            s += a85left.Text + " <=> " + a85right.Text + "\n";
+
+            return s;
         }
         private void saveEncodes(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("Save Messages");
+            
+            String time = DateTime.Now.ToString("MMddyyyy-HHmmss");
+            //MessageBox.Show(time);
 
-            OpenFileDialog dialog = new OpenFileDialog();
+            SaveFileDialog dialog = new SaveFileDialog();
             dialog.InitialDirectory = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            dialog.FileName = "ccpdata" + time + ".txt";
             dialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"; 
             dialog.FilterIndex = 1;
 
             if (dialog.ShowDialog() == true)
             {
-                MessageBox.Show(dialog.FileName);
+                //MessageBox.Show(dialog.FileName);
 
-                //TODO Continue from here
-
+                File.WriteAllText(dialog.FileName, generateSaveString(time));
+                MessageBox.Show("File saved to\n" + dialog.FileName, "Save Successful", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -95,8 +104,23 @@ namespace CCP_App
         {
             //MessageBox.Show("Next Button Clicked");
             Window1 temp = new Window1();
-            temp.Show();
             this.Close();
+            temp.Show();
+            //temp.Show();
+            //object value = await temp.generateReport();
+            //Task.Run(() => temp.generateReport());
+            //Task.Run(() => temp.updateLoading
+
+            /*
+            while (!temp.readystat)
+            {
+
+            }
+
+            ArrayList list = temp.getList();
+            temp.reportText.Text += "" + "\n";
+            */
+
         }
 
         private void encodeB64Button(object sender, RoutedEventArgs e)
@@ -121,6 +145,43 @@ namespace CCP_App
                 a85left.Text = "Invalid ASCII85";
             }
             a85left.Text = decodeASCII85(a85right.Text);
+        }
+
+        private void b64left_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter || e.Key == Key.Return)
+            {
+                e.Handled = true;
+
+                encodeB64Button(null, null);
+            }
+        }
+        private void b64right_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter || e.Key == Key.Return)
+            {
+                e.Handled = true;
+
+                decodeB64Button(null,null);
+            }
+        }
+
+        private void a85left_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter || e.Key == Key.Return)
+            {
+                e.Handled = true;
+
+                encodeA85Button(null, null);
+            }
+        }
+
+        private void encAlgButton(object sender, RoutedEventArgs e)
+        {
+
+            Window2 temp = new Window2();
+            temp.Show();
+
         }
     }
 }
