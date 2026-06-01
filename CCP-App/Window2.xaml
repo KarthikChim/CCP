@@ -11,7 +11,7 @@
     <Grid>
         <!-- <WebBrowser Name="wbb" HorizontalAlignment="Center" Height="564" VerticalAlignment="Center" Width="800"/> -->
 
-        <Wpf:WebView2 HorizontalAlignment="Center" Height="564" VerticalAlignment="Center" Width="780" Source="https://holtsamuel.github.io/CCP-website/"/>
+        <Wpf:WebView2 HorizontalAlignment="Center" Height="564" VerticalAlignment="Center" Width="780" Source="https://karthikchim.github.io/CCP/simple.html"/>
 
     </Grid>
 </Window>
