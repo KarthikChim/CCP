@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Collections;
+﻿using System.Collections;
 using System.Diagnostics;
+using System.IO;
+using System.Windows;
 
 namespace CCP_App
 {
@@ -34,7 +22,6 @@ namespace CCP_App
             {
                 MessageBox.Show("WARNING\nYour operating system is not Windows and will not work with the following section of this program.", "Unsupported OS", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            
 
             readystat = false;
             currentdir = Directory.GetCurrentDirectory();
@@ -45,13 +32,6 @@ namespace CCP_App
 
             report = currentdir + "\\ccptempreport.txt";
             reportText.Text = "There's a good chance this window is going to freeze while generating the system report. That is normal because the text report is being processed in the same thread as this window, and can be safely ignored.\n\n" + "Generating report to: " + report + "\n\n" + reportText.Text + "\n";
-
-            
-            //displayReport();
-            //Show();
-            //generateReport();
-
-            //reportText.Text = temp2
 
             Task.Run(() => generateReport());
         }
@@ -80,12 +60,13 @@ namespace CCP_App
             {
                 readystat = true;
                 MessageBox.Show("There was a problem generating the temporary report.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                Application.Current.Dispatcher.InvokeAsync(() => {
+                Application.Current.Dispatcher.InvokeAsync(() =>
+                {
                     reportText.Text += "\n\nThere was a problem generating the temporary report.";
                 });
                 Process.Start("C:\\WINDOWS\\explorer.exe", "\"" + currentdir + "\"");
                 //reportText.Text += "\nThere was a problem generating the temporary report.";
-                
+
                 return;
             }
 
@@ -112,7 +93,8 @@ namespace CCP_App
 
             readystat = true;
 
-            Application.Current.Dispatcher.InvokeAsync(() => {
+            Application.Current.Dispatcher.InvokeAsync(() =>
+            {
                 reportText.Text = temp2;
             });
 
@@ -131,8 +113,8 @@ namespace CCP_App
         {
             while (!readystat)
             {
-                Application.Current.Dispatcher.InvokeAsync(() => {
-
+                Application.Current.Dispatcher.InvokeAsync(() =>
+                {
                     reportText.Text += ".";
                 });
                 Thread.Sleep(1000);

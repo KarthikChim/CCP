@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Microsoft.Web.WebView2.Core;
+﻿using System.Windows;
 
 namespace CCP_App
 {
@@ -23,12 +10,10 @@ namespace CCP_App
         public Window2()
         {
             InitializeComponent();
+            //Holdover from the original IE-based browser we used
             //string htmlPath = AppDomain.CurrentDomain.BaseDirectory + "simple.html";
             //wbb.Navigate(new Uri($"file:///{htmlPath}"));
-            //wbb.Navigate(new Uri("file:///C:/Users/samuelh/Documents/GitHub/CCP/CCP-App/simple.html"));
-
-
-
+            //wbb.Navigate(new Uri("file:///C:/Users/samuelh/Documents/GitHub/CCP/CCP-App/simple.html
         }
     }
 }

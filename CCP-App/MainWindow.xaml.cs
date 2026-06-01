@@ -1,17 +1,9 @@
 ﻿using Microsoft.Win32;
 using System.Buffers.Text;
-using System.Collections;
 using System.IO;
 using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WpfApp1;
 
 namespace CCP_App
@@ -21,7 +13,6 @@ namespace CCP_App
     /// </summary>
     public partial class MainWindow : Window
     {
-
         private Ascii85 ascii85;
         public MainWindow()
         {
@@ -35,7 +26,7 @@ namespace CCP_App
         {
             //Gather current strings from the text boxes here
 
-            encodeB64Button(null,null);
+            encodeB64Button(null, null);
             encodeA85Button(null, null);
 
             String s = "[" + time + "]\n";
@@ -49,14 +40,14 @@ namespace CCP_App
         private void saveEncodes(object sender, RoutedEventArgs e)
         {
             //MessageBox.Show("Save Messages");
-            
+
             String time = DateTime.Now.ToString("MMddyyyy-HHmmss");
             //MessageBox.Show(time);
 
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.InitialDirectory = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
             dialog.FileName = "ccpdata" + time + ".txt";
-            dialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"; 
+            dialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
             dialog.FilterIndex = 1;
 
             if (dialog.ShowDialog() == true)
@@ -70,7 +61,6 @@ namespace CCP_App
             {
                 MessageBox.Show("There was a problem selecting a file.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
         }
 
         public String encodeBase64(String input)
@@ -88,7 +78,6 @@ namespace CCP_App
             {
                 return "Invalid Base64";
             }
-            
         }
 
         public String encodeASCII85(String input)
@@ -96,7 +85,8 @@ namespace CCP_App
             return ascii85.Encode(Encoding.UTF8.GetBytes(input));
         }
 
-        public String decodeASCII85(String input){
+        public String decodeASCII85(String input)
+        {
             return Encoding.UTF8.GetString(ascii85.Decode(input));
         }
 
@@ -140,7 +130,7 @@ namespace CCP_App
 
         private void decodeA85Button(object sender, RoutedEventArgs e)
         {
-            if(decodeASCII85(a85right.Text) == null)
+            if (decodeASCII85(a85right.Text) == null)
             {
                 a85left.Text = "Invalid ASCII85";
             }
@@ -152,7 +142,6 @@ namespace CCP_App
             if (e.Key == Key.Enter || e.Key == Key.Return)
             {
                 e.Handled = true;
-
                 encodeB64Button(null, null);
             }
         }
@@ -162,7 +151,7 @@ namespace CCP_App
             {
                 e.Handled = true;
 
-                decodeB64Button(null,null);
+                decodeB64Button(null, null);
             }
         }
 
@@ -171,17 +160,14 @@ namespace CCP_App
             if (e.Key == Key.Enter || e.Key == Key.Return)
             {
                 e.Handled = true;
-
                 encodeA85Button(null, null);
             }
         }
 
         private void encAlgButton(object sender, RoutedEventArgs e)
         {
-
             Window2 temp = new Window2();
             temp.Show();
-
         }
     }
 }
